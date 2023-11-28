@@ -1,15 +1,18 @@
 # ta-terraform
 This project aims to create a cloudfront distribution to serve multiple S3 buckets based on path patterns.
-The following schema explain the architecture
 
-![alt text](docs/architecture.png)
+The following schema explain the architecture :
+
+<p align="center">
+  <img src="docs/architecture.png" />
+</p>
 
 # Usage
 To use this project and deploy the described infrastructure , these are the following steps : 
 
-1. Update the terraform.tf file to set the backend tfstate configuration
+1. Update the **terraform.tf** file to set the backend tfstate configuration .
 
-2. Set the AWS region in variables.tf
+2. Set the AWS region in **variables.tf** .
 
 3. Execute the following commands : 
 
@@ -23,7 +26,7 @@ terraform workspace new <Environment>  # Environment can be dev, staging
 terraform plan --var-file=tfvars/<Environment>.tfvars 
 ```
 ```
-terraform apply new terraform plan --var-file=tfvars/<Environment>.tfvars 
+terraform apply --var-file=tfvars/<Environment>.tfvars 
 ```
 
 # Terraform-docs
