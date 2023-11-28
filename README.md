@@ -20,7 +20,7 @@ To use this project and deploy the described infrastructure , these are the foll
 terraform init
 ```
 ```
-terraform workspace new <Environment>  # Environment can be dev, staging
+terraform workspace new <Environment>  # Environment can be dev, staging or prod
 ```
 ```
 terraform plan --var-file=tfvars/<Environment>.tfvars 
